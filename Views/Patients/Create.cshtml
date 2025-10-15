@@ -1,0 +1,69 @@
+@model HospitalSanVicente.Models.Patient
+@using HospitalSanVicente.Models 
+
+@{
+    ViewData["Title"] = "Create Patient";
+}
+
+<h2 class="mb-4">Register New Patient</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group mb-3">
+        <label asp-for="Document" class="form-label"></label>
+        <input asp-for="Document" class="form-control" type="number"/>
+        <span asp-validation-for="Document" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="FirstName" class="form-label"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="LastName" class="form-label"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Age" class="form-label"></label>
+        <input asp-for="Age" class="form-control" type="number" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group mb-3">
+        <label asp-for="BloodType" class="form-label"></label>
+        <select asp-for="BloodType" class="form-select">
+            <option value="">-- Seleccione Tipo de Sangre --</option>
+            @foreach (var type in Enum.GetValues(typeof(BloodType)))
+            {
+               <option value="@type.ToString().Replace("_Positive", "+").Replace("_Negative", "-")">
+                    @type.ToString().Replace("_Positive", "+").Replace("_Negative", "-")
+                </option>
+            }
+        </select>
+        <span asp-validation-for="BloodType" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="List" class="btn btn-secondary">Back to List</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

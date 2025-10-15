@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-4">Bienvenido </h1>
+    <p class="lead">Sistema integral de gestión médica</p>
+    
+    <div class="row mt-5">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Pacientes</h5>
+                    <p class="card-text">Registre nuevos Pacientes</p>
+                    <a href="@Url.Action("Create", "Patients")" class="btn btn-primary">Registrar Paciente</a>
+                    <a href="@Url.Action("List", "Patients")" class="btn btn-outline-primary">Ver Pacientes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Doctores</h5>
+                    <p class="card-text">Registre nuevos Doctores</p>
+                    <a href="@Url.Action("Create", "Doctors")" class="btn btn-primary">Registrar Doctores</a>
+                    <a href="@Url.Action("List", "Doctors")" class="btn btn-outline-primary">Ver Doctores</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Citas</h5>
+                    <p class="card-text">Programa tu cita médicas .</p>
+                    <a href="@Url.Action("Create", "Appointments")" class="btn btn-success">Citas</a>
+                    <a href="@Url.Action("List", "Appointments")" class="btn btn-outline-success">Ver Citas</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Gestión de Historial de Mails</h5>
+                    <p>
+    <a asp-controller="EmailLog" asp-action="List" class="btn btn-info">
+        Ver Historial de Correos
+    </a>
+</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

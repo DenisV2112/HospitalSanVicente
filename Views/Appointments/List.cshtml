@@ -1,0 +1,108 @@
+@model List<HospitalSanVicente.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Listado de Citas";
+}
+
+<h2>Listado de Citas</h2>
+
+<div class="mb-3">
+    <a class="btn btn-success" asp-action="List">Todas las citas</a>
+
+    <form method="get" asp-action="ListByPatient" class="d-inline ms-2">
+        <select name="patientDocument" class="form-select d-inline w-auto">
+            <option value="">-- Seleccione Paciente --</option>
+            @foreach (var p in ViewBag.Patients)
+            {
+                <option value="@p.Document">@p.FirstName @p.LastName</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary">Filtrar por paciente</button>
+    </form>
+
+    <form method="get" asp-action="ListByDoctor" class="d-inline ms-2">
+        <select name="doctorDocument" class="form-select d-inline w-auto">
+            <option value="">-- Seleccione Doctor --</option>
+            @foreach (var d in ViewBag.Doctors)
+            {
+                <option value="@d.Document">@d.FirstName @d.LastName</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary">Filtrar por doctor</button>
+    </form>
+</div>
+
+@if (ViewBag.Filter != null)
+{
+    <p class="text-info">@ViewBag.Filter</p>
+}
+
+<div class="card">
+    <div class="card-body">
+        @if (Model != null && Model.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Paciente</th>
+                            <th>Doctor</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var appointment in Model)
+                        {
+                            <tr>
+                                <td>@appointment.Id</td>
+                                <td>@appointment.Patient?.FirstName @appointment.Patient?.LastName</td>
+                                <td>@appointment.Doctor?.FirstName @appointment.Doctor?.LastName</td>
+                                <td>@appointment.Date.ToString("g")</td>
+                                <td>@appointment.Status</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        @if (appointment.Status != "Attended")
+                                        {
+                                            <form asp-action="ChangeStatus" method="post" style="display:inline;">
+                                                <input type="hidden" name="id" value="@appointment.Id" />
+                                                <input type="hidden" name="newStatus" value="Attended" />
+                                                <button type="submit" class="btn btn-sm btn-success" title="Marcar como Atendida">
+                                                    <i class="bi bi-check-circle"></i>
+                                                </button>
+                                            </form>
+                                        }
+
+                                        @if (appointment.Status != "Canceled")
+                                        {
+                                            <form asp-action="ChangeStatus" method="post" style="display:inline;">
+                                                <input type="hidden" name="id" value="@appointment.Id" />
+                                                <input type="hidden" name="newStatus" value="Canceled" />
+                                                <button type="submit" class="btn btn-sm btn-danger" title="Cancelar Cita">
+                                                    <i class="bi bi-x-circle"></i>
+                                                </button>
+                                            </form>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="text-center py-4">
+                <i class="bi bi-calendar-x display-1 text-muted"></i>
+                <h4 class="text-muted mt-3">No hay citas registradas</h4>
+                <p class="text-muted">Puedes registrar la primera cita usando el botón Crear Cita.</p>
+                <a asp-action="Create" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i> Crear Cita
+                </a>
+            </div>
+        }
+    </div>
+</div>

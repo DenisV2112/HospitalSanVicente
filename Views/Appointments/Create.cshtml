@@ -1,0 +1,48 @@
+@model HospitalSanVicente.Models.Appointment
+
+
+<h2>Crear Cita</h2>
+
+<form asp-action="Create" method="post">
+@if (ViewData.ModelState[""]?.Errors.Count > 0)  // "" es para errores globales añadidos manualmente
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewData.ModelState[""].Errors[0].ErrorMessage
+        </div>
+    }
+    <div class="mb-3">
+        <label asp-for="PatientDocument" class="form-label">Paciente</label>
+        <select asp-for="PatientDocument" class="form-select">
+            <option value="">-- Seleccione Paciente --</option>
+            @foreach(var p in ViewBag.Patients)
+            {
+                <option value="@p.Document">@p.FirstName @p.LastName</option>
+            }
+        </select>
+        <span asp-validation-for="PatientDocument" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DoctorDocument" class="form-label">Doctor</label>
+        <select asp-for="DoctorDocument" class="form-select">
+            <option value="">-- Seleccione Doctor --</option>
+            @foreach(var d in ViewBag.Doctors)
+            {
+                <option value="@d.Document">@d.FirstName @d.LastName - @d.Area</option>
+            }
+        </select>
+        <span asp-validation-for="DoctorDocument" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Date" class="form-label">Fecha y Hora</label>
+        <input asp-for="Date" class="form-control" type="datetime-local" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Crear Cita</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

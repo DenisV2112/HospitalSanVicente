@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HospitalSanVicente
+build_property.RootNamespace = HospitalSanVicente
+build_property.ProjectDir = /home/csharp/HospitalSanVicente/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/csharp/HospitalSanVicente
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/csharp/HospitalSanVicente/Views/Appointments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Appointments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Appointments/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Doctors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Doctors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Doctors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Doctors/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/EmailLog/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxMb2cvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Patients/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Patients/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Patients/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Patients/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/csharp/HospitalSanVicente/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-w6zbauifzk

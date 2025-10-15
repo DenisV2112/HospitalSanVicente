@@ -1,0 +1,49 @@
+@model List<HospitalSanVicente.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Listado de Doctores";
+}
+
+<h2>Listado de Doctores</h2>
+
+<div class="mb-3 d-flex align-items-center">
+    <form method="get" asp-action="List" class="me-2 d-inline">
+        <select name="specialty" class="form-select d-inline w-auto">
+            <option value="">-- Seleccione Especialidad --</option>
+            @foreach(var s in ViewBag.Specialties)
+            {
+                <option value="@s">@s</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary">Filtrar por especialidad</button>
+    </form>
+
+    <a asp-action="List" class="btn btn-success">Mostrar todos los doctores</a>
+</div>
+
+@if(ViewBag.Filter != null)
+{
+    <p class="text-info mt-2">@ViewBag.Filter</p>
+}
+
+<table class="table table-striped table-hover mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Área</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var doctor in Model)
+        {
+            <tr>
+                <td>@doctor.FirstName @doctor.LastName</td>
+                <td>@doctor.Area</td>
+                <td>@doctor.Mail</td>
+                <td>@doctor.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
